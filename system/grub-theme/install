@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 git clone https://github.com/vinceliuice/grub2-themes.git
 
 cd ./grub2-themes
-sudo ./install.sh --boot --slaze --white
+sudo ./install.sh --boot --theme slaze --icon white
 cd .. 
 
 rm -rf grub2-themes

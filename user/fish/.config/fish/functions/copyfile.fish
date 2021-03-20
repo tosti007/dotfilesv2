@@ -7,6 +7,6 @@ function copyfile -d "Copy the content of a file to the clipboard"
         echo "File '$argv[1]' does not exist"
         return 1
     end
-    cat $argv[1] | xsel --clipboard -i
+    cat $argv[1] | xclip -selection clipboard -i
 end
 
