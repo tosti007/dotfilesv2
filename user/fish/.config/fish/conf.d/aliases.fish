@@ -11,7 +11,7 @@ alias tree "ls --tree"
 # cat shortcuts, but with bat
 alias cat "bat"
 alias ccat "bat --plain --color never --pager never"
-alias rgpdf "rg --pre rgpdf-pre --pre-glob '*.pdf'"
+alias rgpdf "rg --pre $HOME/.dotfiles/assets/rgpdf-pre.sh --pre-glob '*.pdf'"
 
 # git aliases
 alias gis "git status"
