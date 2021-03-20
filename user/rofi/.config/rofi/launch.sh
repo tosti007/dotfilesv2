@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 
 case $1 in
 fullscreen)
-	rofi -theme fullscreen -show combi
+	rofi -theme fullscreen -show drun
 	;;
 windows)
 	rofi -theme windows -show window -selected-row 1

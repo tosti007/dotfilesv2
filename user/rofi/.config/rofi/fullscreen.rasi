@@ -1,8 +1,7 @@
 configuration {         
     theme: "fullscreen";         
-    modi: "drun,combi,calc";
+    modi: "Scripts:./scripts.sh,drun,calc";
     display-drun: "Apps";
-    display-combi: "General";
     display-calc: "Calculator";
 }
 
