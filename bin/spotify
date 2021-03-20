@@ -25,13 +25,12 @@ function controll {
 }
 
 function controll-start {
-	spotifyd --no-daemon >/dev/null 2>&1 &
-	spotifyd_pid="$!"
+	systemctl --user start spotifyd.service
 }
 
 function controll-stop {
 	~/.config/polybar/spotify.sh close
-	kill $spotifyd_pid
+	systemctl --user stop spotifyd.service
 }
 
 case $1 in
