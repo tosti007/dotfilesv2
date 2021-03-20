@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cd "$(dirname "$0")"
+
+outdir="$HOME/.local/share/applications/"
+outfile="$(realpath --relative-to "$outdir" ./hide.desktop)"
+
+mkdir -p "$outdir"
+
+while read line; do
+	ln -s "$outfile" "$outdir$line.desktop"
+done < ./entries.list
+
