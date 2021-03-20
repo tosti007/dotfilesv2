@@ -37,7 +37,7 @@ keybindings:
   # Key stroke can be used if it only uses two keys:
   # ctrl-q works,
   # ctrl-alt-q doesn't.
-  back: "ctrl-q"
+  back: "q"
 
   jump_to_album: "a"
 
