@@ -26,6 +26,7 @@ gaps top 32 # outer + polybar = 8 + 24
 exec_always --no-startup-id pkill unclutter; unclutter --ignore-scrolling
 exec_always --no-startup-id pkill picom; picom
 exec_always --no-startup-id ~/.dotfiles/user/pywal/restore
+exec_always --no-startup-id pkill pulseeffects; pulseeffects --gapplication-service
 exec_always --no-startup-id ~/.fehbg
 exec_always --no-startup-id ~/.config/dunst/launch.sh
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -96,10 +97,6 @@ bindsym $mod+a scratchpad show
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-
-# launch utilities
-bindsym --release $mod+p exec bwrofi
-bindsym $mod+n exec nmrofi
 
 #######################################
 # Hotkeys with bound modes
