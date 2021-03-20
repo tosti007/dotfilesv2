@@ -6,12 +6,13 @@ numix-square-icon-theme-git
 quintom-cursor-theme-git
 
 # audio
-pipewire-git
-pipewire-alsa-git
-pipewire-pulse-git
-pipewire-jack-git
+pipewire
+pipewire-alsa
+pipewire-pulse
+pipewire-jack
 pavucontrol
 qjackctl
+pulseeffects
 
 # theming
 python-pywal
