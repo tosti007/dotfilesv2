@@ -12,6 +12,7 @@ no_names = true
 # Quick access: https://www.nerdfonts.com/cheat-sheet
 discord = "\ufb6e"
 firefox = "\ue745"
+chromium = "\ue743"
 urxvt = "\ue795"
 "pinentry-gtk-2" = "\uf74f"
 vscodium = "\ue70c"
