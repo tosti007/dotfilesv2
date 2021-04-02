@@ -5,9 +5,9 @@ cd "$(dirname "$0")"
 outdir="$HOME/.local/share/applications/"
 outfile="$(realpath --relative-to "$outdir" ./hide.desktop)"
 
+entries=`sed -E '/^\#/d; s/\s//; /^$/d' entries.list | tr '\n' '|' | rev | cut -c 2- | rev`
+
 mkdir -p "$outdir"
 
-while read line; do
-	ln -s "$outfile" "$outdir$line.desktop"
-done < ./entries.list
+fd "^($entries).desktop$" /usr/share/applications -x ln -s "$outfile" "$outdir{/}"
 
