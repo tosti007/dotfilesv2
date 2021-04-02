@@ -104,6 +104,7 @@ label-connected= "直%signal%%"
 type = internal/pulseaudio
 label-volume = "墳%percentage%%"
 label-muted = "ﱝ%percentage%%"
+click-right = pulseeffects
 
 [module/brightness]
 type = internal/xbacklight
