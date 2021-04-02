@@ -10,13 +10,13 @@ no_names = true
 
 [icons]
 # Quick access: https://www.nerdfonts.com/cheat-sheet
-discord = "ﭮ"
-firefox = ""
-urxvt = ""
-"pinentry-gtk-2" = ""
-vscodium = ""
-"microsoft teams - preview" = ""
-"org.pwmt.zathura" = ""
+discord = "\ufb6e"
+firefox = "\ue745"
+urxvt = "\ue795"
+"pinentry-gtk-2" = "\uf74f"
+vscodium = "\ue70c"
+"microsoft teams - preview" = "\uf871"
+"org.pwmt.zathura" = "\uf725"
 
 [aliases]
 "gimp-2.10" = "gimp"
