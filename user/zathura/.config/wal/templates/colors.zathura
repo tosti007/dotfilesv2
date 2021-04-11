@@ -19,10 +19,11 @@ set notification-error-fg "{background}"
 set notification-warning-bg "{color9}"
 set notification-warning-fg "{background}"
 
-set tabbar-bg "{background}"
-set tabbar-fg "{color15}"
-set tabbar-focus-bg "{color0}"
-set tabbar-focus-fg "{foreground}"
+# These do not seem to work, but were defined in the documentation.
+#set tabbar-bg "{background}"
+#set tabbar-fg "{color15}"
+#set tabbar-focus-bg "{color0}"
+#set tabbar-focus-fg "{foreground}"
 
 set statusbar-bg "{background}"
 set statusbar-fg "{foreground}"

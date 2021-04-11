@@ -6,7 +6,7 @@
 include "../../../../../.cache/wal/colors.zathura"
 
 # Visual settings
-set font "InputSans Nerd Font" normal 9
+set font "InputSans Nerd Font normal 9"
 set recolor true
 set recolor-keephue true
 set recolor-reverse-video true
