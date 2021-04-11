@@ -45,7 +45,13 @@ case $1 in
 	spt
 	;;
 current)
-	controll metadata --format "{{xesam:title}} — {{xesam:artist}}" 2> /dev/null
+	controll metadata --format $'{{title}}\n{{artist}}' 2> /dev/null | sed \
+		-e 's/(.*)//' \
+		-e 's/\[.*\]//' \
+		-e 's/-.*$//' \
+		-e '2 s/,.*$//' \
+		-e 's/  / /; s/^ //; s/ $//' | \
+		sed 'N; s/\n/ — /'
 	;;
 play | pause | play-pause | next | previous | status)
 	controll $1
