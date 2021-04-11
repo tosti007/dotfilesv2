@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rbw get "$@" --full | rg TOTP | sed -E 's/^.*secret=([^&]*).*$/\1/' | base32 -d | totp | xclip -selection clipboard
