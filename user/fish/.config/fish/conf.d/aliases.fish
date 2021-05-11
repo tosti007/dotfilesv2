@@ -1,7 +1,7 @@
 # Command overwrites and shortcuts
 alias rmr "rm -rf"
 alias xclip "xclip -selection clipboard"
-alias rgpdf "rg --pre $HOME/.dotfiles/assets/rgpdf-pre.sh --pre-glob '*.pdf'"
+alias rgpdf "rg --pre $HOME/.dotfiles/assets/rgpdf-pre.sh --pre-glob '*.pdf' --ignore-case"
 alias v "vscodium ."
 
 # ls shortcuts, but with exa because that's cooler
