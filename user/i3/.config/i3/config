@@ -25,6 +25,7 @@ gaps top 32 # outer + polybar = 8 + 24
 # Start things we need for our desktop
 exec_always --no-startup-id pkill unclutter; unclutter --ignore-scrolling
 exec_always --no-startup-id pkill picom; picom
+exec_always --no-startup-id pkill libinput-gestures; libinput-gestures
 exec_always --no-startup-id ~/.dotfiles/user/pywal/restore
 exec_always --no-startup-id pkill pulseeffects; pulseeffects --gapplication-service
 exec_always --no-startup-id ~/.fehbg

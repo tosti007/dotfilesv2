@@ -36,7 +36,7 @@ bat
 fd
 ripgrep
 
-# File manager
+# file manager
 nnn
 dragon-drag-and-drop
 
@@ -45,11 +45,14 @@ rofi
 rofi-dmenu
 rofi-calc
 
+# cursor
+unclutter
+libinput-gestures
+
 # other
 polybar-git
 picom-git
 xclip
 xorg-xbacklight
-unclutter
 batify-git
 
