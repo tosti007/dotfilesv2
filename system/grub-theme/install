@@ -10,5 +10,5 @@ cd ..
 
 rm -rf grub2-themes
 
-sudo cp ../../assets/background/background.jpg /boot/grub/themes/Slaze/
+sudo cp ../../assets/background/background.jpg /boot/grub/themes/slaze/
 
