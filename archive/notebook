@@ -3,7 +3,7 @@
 # Quit the script if any command fails
 set -e
 
-source ../assets/ask.sh
+source "$(dirname $(realpath $0))/../assets/ask.sh"
 
 __usage="
 Jupyter Notebook utility tool
