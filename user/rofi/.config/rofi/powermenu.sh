@@ -16,6 +16,7 @@ case "$1" in
 	echo -e "$hibernate"
 	;;
 Lock)
+	spotify lock
 	loginctl lock-session
 	;;
 Suspend)

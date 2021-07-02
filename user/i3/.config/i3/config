@@ -65,7 +65,7 @@ bindsym $mod+Shift+Return exec $TERMINAL
 bindsym $mod+q kill
 
 # lock/poweroff screen
-bindsym --release $mod+BackSpace exec --no-startup-id loginctl lock-session
+bindsym --release $mod+BackSpace exec --no-startup-id spotify lock && loginctl lock-session
 bindsym --release $mod+Shift+BackSpace exec --no-startup-id ~/.config/rofi/launch.sh powermenu
 
 # dmenu/window switcher ect

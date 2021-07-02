@@ -15,6 +15,8 @@ Commands:
   previous	Play the previous track
   status	Displays the current playing status
   current 	Displays the current track and artist
+  lock		Pause the player if it's playing and save its state
+  unlock 	Play the player if the saved state is playing
 
 Options:
   -h, --help	Show this output
@@ -55,6 +57,18 @@ current)
 	;;
 play | pause | play-pause | next | previous | status)
 	controll $1
+	;;
+lock)
+	if [[ `$0 status` == 'Playing' ]]; then
+	        $0 pause
+        	touch /tmp/spotify_lock_resume
+	fi
+	;;
+unlock)
+	if [ -f /tmp/spotify_lock_resume ]; then
+        	$0 play
+	        rm /tmp/spotify_lock_resume 
+	fi
 	;;
 *)
 	echo "No such command"
