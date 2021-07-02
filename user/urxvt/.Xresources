@@ -45,7 +45,7 @@ URxvt.keysym.C-M-v: builtin-string:
 !! Bind copy and paste hotkeys
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Control-v: eval:paste_primary
+URxvt.keysym.Alt-Control-v: eval:paste_primary
 
 ! Scrolling settings
 URxvt*scrollTtyOutput: true
