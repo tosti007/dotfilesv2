@@ -1,0 +1,22 @@
+{
+    "name": "pywal",
+    "displayName": "pywal",
+    "description": "A color theme for generated with pywal, inspired from https://github.com/bluedrack/vscode-wal",
+    "version": "0.0.1",
+    "publisher": "tosti007",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "pywal",
+                "uiTheme": "vs-dark",
+                "path": "../../../.cache/wal/colors-vscode-theme.json"
+            }
+        ]
+    }
+}
