@@ -5,6 +5,7 @@
 # present in a directory, the script will be executed instead.
 
 source ./assets/ask.sh
+source ./assets/packages.sh
 
 function stow2() {
   # Execute a script instead of stowing if an installation script is present
@@ -34,12 +35,12 @@ function install() {
   # Install a list of packages if not yet installed
   
   # Remove any comments and replace newlines with spaces
-  pkglist=$(sed -e 's/#.*$//; /^[[:space:]]*$/d' $1 | tr '\n' ' ')
+  pkglist=$(packages-parse $1)
   
   if [[ -n "$DRY_RUN" ]]; then
     command="echo -e 'Install:\\n\\t$pkglist'"
   else
-    command="yay -S --needed $pkglist --nocleanmenu --nodiffmenu --noeditmenu --noupgrademenu --askremovemake --removemake"
+    command="packages-install $pkglist"
   fi
 
   if [[ -n "$NO_ASK" ]] || ask "Install packages for ${1%.pkgs}?" Y; then
