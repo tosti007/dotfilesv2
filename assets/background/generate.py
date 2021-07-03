@@ -6,6 +6,7 @@ from string import Template
 from json import loads as load_json
 from os import getenv, chdir, path
 from sys import argv
+from random import seed as set_seed
 from random import randrange as rand
 import subprocess
 
@@ -42,6 +43,9 @@ def read_color_order(idx, order, colors):
 
 def create_colors(orders, colors):
     return [read_color_order(n, o, colors) for n, o in enumerate(orders)]
+
+# Set the seed
+set_seed(seed)
 
 main['size_x'] = 110 + main['margin'] * 2
 main['size_y'] = 110 + main['margin'] * 2

@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # Settings for background generation
 
+# A seed to ensure that we get the same image every time
+seed = 1234
+
 # The colors ids as defined by pywal.
 # Each tuple represents a combination of colors.
 # A random tuple will be picked for each floppy.
