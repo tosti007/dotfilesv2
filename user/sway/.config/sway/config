@@ -1,0 +1,15 @@
+# Main config file
+
+include definitions.conf
+include base.conf
+
+include outputs.conf
+include inputs.conf
+
+include $HOME/.cache/ruwal/sway/style.conf
+
+include autostart.conf
+include rules.conf
+
+include hotkeys/*
+include modes/*

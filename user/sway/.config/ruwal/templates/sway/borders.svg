@@ -1,0 +1,24 @@
+{% if border.shadow.dx > border.shadow.dy -%}
+{% set offset = border.shadow.dx -%}
+{% else -%}
+{% set offset = border.shadow.dy -%}
+{% endif -%}
+{% set offset = offset * border.shadow.stddev * 2 -%}
+{% set size_bord = border.size * 2 + 1 -%}
+{% set size_full = size_bord + offset * 2 -%}
+<svg fill="transparent" width="{{ size_full }}" height="{{ size_full }}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" color-interpolation-filters="sRGB">
+      <feFlood flood-color="{{ color[border.shadow.color] }}" flood-opacity="{{ border.shadow.opacity }}" result="color" />
+      <feOffset in="SourceAlpha" dx="{{ border.shadow.dx }}" dy="{{ border.shadow.dy }}" result="offset"/>
+      <feGaussianBlur in="offset" stdDeviation="{{ border.shadow.stddev }}" result="blur"/>
+      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+      <feComposite in="SourceGraphic" in2="shadow"/>
+    </filter>
+  </defs>
+  <g fill="#000000" filter="url(#shadow)">
+    <rect x="{{ offset }}" y="{{ offset }}" width="{{ size_bord }}" height="{{ size_bord }}" rx="{{ border.corner }}" ry="{{ border.corner }}"/>
+    <rect x="{{ offset }}" y="{{ offset }}" width="{{ border.size }}" height="{{ border.size }}"/>
+  </g>
+</svg>
+
