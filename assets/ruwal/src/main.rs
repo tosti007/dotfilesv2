@@ -2,7 +2,7 @@ use anyhow::{/*anyhow,*/ bail, Result};
 use glob::glob;
 use is_executable::IsExecutable;
 use std::{fs, path::PathBuf, process::Command};
-use tera::{Tera, Context};
+use tera::{Context, Tera};
 
 mod helpers;
 
@@ -63,10 +63,17 @@ fn main() -> Result<()> {
     }
 
     println!("Executing hooks");
-    for item in glob(config_item("hooks/**/*").to_str().unwrap())
-        .unwrap()
-        .filter_map(|f| f.ok())
-        .filter(|f| f.is_executable())
+    for item in glob(
+        config_item(
+            "hooks/**/
+*",
+        )
+        .to_str()
+        .unwrap(),
+    )
+    .unwrap()
+    .filter_map(|f| f.ok())
+    .filter(|f| f.is_executable())
     {
         let status = Command::new(&item)
             .current_dir(item.parent().unwrap())
