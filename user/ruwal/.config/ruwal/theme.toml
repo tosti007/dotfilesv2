@@ -1,0 +1,47 @@
+wallpaper = "$HOME/.dotfiles/assets/background/background.jpg"
+
+[font]
+regular = "InputSans Nerd Font:style=Regular"
+
+[border]
+color = "0"
+size = 8
+corner = 6
+
+[border.shadow]
+color = "15"
+dx = 1.5
+dy = 1.5
+opacity = 0.5
+stddev = 3
+
+[special]
+alpha = 90
+background = "#141414"
+foreground = "#eeeeee"
+cursor = "#eeeeee"
+
+[color]
+0 = "#000000"
+8 = "#000000"
+
+1 = "#ff5252"
+9 = "#ff5252"
+
+2 = "#6ab067"
+10 = "#6ab067"
+
+3 = "#ecd85a"
+11 = "#ecd85a"
+
+4 = "#0f6999"
+12 = "#0f6999"
+
+5 = "#886fb1"
+13 = "#886fb1"
+
+6 = "#4ab6b6"
+14 = "#4ab6b6"
+
+7 = "#aaaaaa"
+15 = "#aaaaaa"
