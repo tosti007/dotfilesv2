@@ -16,7 +16,7 @@
       <feComposite in="SourceGraphic" in2="shadow"/>
     </filter>
   </defs>
-  <g fill="#000000" filter="url(#shadow)">
+  <g fill="{{ color[border.color] }}" filter="url(#shadow)">
     <rect x="{{ offset }}" y="{{ offset }}" width="{{ size_bord }}" height="{{ size_bord }}" rx="{{ border.corner }}" ry="{{ border.corner }}"/>
     <rect x="{{ offset }}" y="{{ offset }}" width="{{ border.size }}" height="{{ border.size }}"/>
   </g>
