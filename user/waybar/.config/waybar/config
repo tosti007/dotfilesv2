@@ -1,0 +1,128 @@
+{
+//=============================
+// Global settigs
+//=============================
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "width": 1366,
+    "exclusive": true,
+    "passthrough": false,
+
+//=============================
+// Selected Modules
+//=============================
+    "modules-left": [
+	"sway/workspaces",
+	"sway/mode", 
+    ],
+    //"custom/media#music",
+    "modules-center": [
+	"sway/window",
+    ],
+    "modules-right": [
+	"network",
+	"pulseaudio",
+	"backlight",
+	"battery",
+	"clock",
+    ],
+    //"custom/media#power",
+
+//=============================
+// Module Settings
+//=============================
+    "sway/workspaces": {
+        //"format": "{name}: {icon}",
+	"format-icons": [],
+
+	"disable-scroll": false,
+	"disable-scroll-wraparound": true,
+	"enable-bar-scroll": true,
+	"smooth-scrolling-threshold": 2,
+
+	"disable-click": false,
+	"disable-auto-back-and-forth": true,
+	
+	"disable-markup": false,
+	"current-only": false,
+	"persistent_workspaces": {},
+	"numeric-first": false,
+    },
+    "sway/mode": {
+        "format": "{}",
+	"on-click": "swaymsg mode \"default\"",
+    },
+    "sway/window": {
+    	"format": "{}",
+	"on-click": "swaymsg fullscreen toggle",
+	"rewrite": {},
+    },
+    "custom/media#music": { // TODO
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
+    },
+    "network": {
+        //"interface": "wlp2*",
+	"interval": 60,
+	"family": "ipv4",
+        "format": "{icon}",
+	"format-wifi": "{icon} {signalStrength}%",
+	"format-icons": {
+		"wifi": "直",
+		"etheret": "",
+		"linked": "",
+        	"disconnected": "⚠",
+	},
+	"tooltip": true,
+	"tooltip-format": "{icon} {ifname} ({bandwidthUpBits}ﰵ, {bandwidthDownBits}ﰬ)",
+        "tooltip-format-wifi": "{icon} {essid} ({bandwidthUpBits}ﰵ, {bandwidthDownBits}ﰬ)",
+        "tooltip-format-ethernet": "{icon} ({bandwidthUpBits}ﰵ, {bandwidthDownBits}ﰬ)",
+	"tooltip-format-disconnected": "{icon} Disconnected",
+    },
+    "pulseaudio": {
+        "scroll-step": 2,
+        "format": "墳{volume}%",
+        "format-muted": "ﱝ",
+        "format-bluetooth": "墳{volume}%",
+        "format-bluetooth-muted": "ﱝ",
+        "on-click": "pulseeffects",
+    },
+    "backlight": {
+	"interval": 2,
+        "format": "{icon} {percent}%",
+        "format-icons": ["盛"],
+	"on-click": "~/.config/waybar/toggle-light.sh",
+        "on-scroll-up": "light -A 2",
+        "on-scroll-down": "light -U 2",
+    },
+    "battery": {
+    	"design-capacity": false,
+        "states": {
+            "warning": 30,
+            "critical": 15,
+        },
+        "format": "{icon}{capacity}%",
+	"format-charging": "{capacity}%",
+	"format-discharging": "{capacity}%",
+        //"format-plugged": "",
+	"tooltip": true,
+	"tooltip-format": "{timeTo}",
+    },
+    "clock": {
+    	"format": "{:%H:%M}",
+	"today-format": "<b><u>{}</u></b>",
+	"tooltip": true,
+        "tooltip-format": "<big>{:%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "custom/media#power": { // TODO
+    },
+}

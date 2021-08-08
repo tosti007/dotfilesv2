@@ -1,0 +1,76 @@
+* {
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+    background-color: transparent;
+    color: #eeeeee;
+}
+
+window#waybar {
+    background-color: #141414;
+    border-bottom: 8px solid #000000;
+}
+
+box > widget > * {
+    /* All modules their text */
+    /* fix-height, padding, fix-height */
+    padding: 4px 4px 0px;
+    margin: 0 4px 8px;
+}
+
+.modules-left {
+	margin-left: 8px;
+}
+.modules-right {
+	margin-right: 8px;
+}
+.modules-left > widget:first-child > * {
+    margin-left: 0;
+}
+.modules-right > widget:last-child > * {
+    margin-right: 0;
+}
+
+#workspaces {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#workspaces > button {
+    /* fix-height, padding, fix-height */
+    padding: 2px 4px 0px;
+    margin: 0;
+    /* Use box-shadow instead of border so the text isn't offset */
+}
+
+#workspaces button.focused, #pulseaudio.muted {
+    background-color: #000000;
+}
+
+@keyframes blink-red {
+    from {
+	background-color: transparent;
+    }
+    to {
+    	background-color: #ff5252;
+        color: #000000;
+    }
+}
+
+#battery.low:not(.charging) {
+    background-color: #ecd85a;
+}
+#battery.critical:not(.charging) {
+    animation-name: blink-red;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Fixing label offset */
+#clock, #workspaces button {
+	padding-top: 4px;
+}
